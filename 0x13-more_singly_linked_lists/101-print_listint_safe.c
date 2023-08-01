@@ -10,7 +10,7 @@ size_t print_listint_safe(const listint_t *head);
  * @head: A pointer to the head of the listint_t to check.
  *
  * Return: If the list is not looped - 0.
- * Otherwise - the number of unique nodes in the list.
+ *         Otherwise - the number of unique nodes in the list.
  */
 size_t looped_listint_len(const listint_t *head)
 {
@@ -36,7 +36,7 @@ size_t looped_listint_len(const listint_t *head)
 			}
 
 			tortoise = tortoise->next;
-while (tortoise != hare)
+			while (tortoise != hare)
 			{
 				nodes++;
 				tortoise = tortoise->next;
@@ -57,7 +57,7 @@ while (tortoise != hare)
  * @head: A pointer to the head of the listint_t list.
  *
  * Return: The number of nodes in the list.
- */
+*/
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t nodes, index = 0;
@@ -72,7 +72,6 @@ size_t print_listint_safe(const listint_t *head)
 			head = head->next;
 		}
 	}
-
 	else
 	{
 		for (index = 0; index < nodes; index++)
